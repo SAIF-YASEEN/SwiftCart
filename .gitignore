@@ -1,0 +1,6 @@
+frontend/node_modules
+backend/target/classes
+backend/target/
+TODO.md
+backend/.env
+.env

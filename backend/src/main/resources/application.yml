@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: ecommerce-backend
+  data:
+    mongodb:
+      uri: ${MONGODB_URI}
+      database: ecommerce
+
+server:
+  port: ${PORT:8080}
+
+jwt:
+  secret: ${JWT_SECRET:mySecretKeyForJWTTokenGenerationMustBeAtLeast256BitsLong}
+  expiration: 86400000 # 24 hours in milliseconds
+
+cors:
+  allowed-origins: ${CORS_ORIGINS:http://localhost:5173,http://localhost:3000}
+
+logging:
+  level:
+    com.ecommerce: DEBUG
+    org.springframework.security: DEBUG
